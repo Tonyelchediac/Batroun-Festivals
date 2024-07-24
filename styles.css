@@ -28,7 +28,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px;
+  padding: 10px 20px;
   position: fixed;
   width: calc(100% - 30rem);
   top: 0;
