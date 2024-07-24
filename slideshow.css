@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  filter: brightness(50%);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.p-title{
+  margin-top: 20px;
+  font-size: 40px;
+  font-family:"Lora", sans-serif;
+}
+
+.p-content{
+  margin-top: 20px;
+}
+
+.arrow{
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .video-background {
+    height: 95vh;
+  }
+
+  .p-title{
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  .content {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
