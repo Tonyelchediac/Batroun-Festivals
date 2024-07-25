@@ -17,3 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+function validateCaptcha() {
+  const captchaInput = document.getElementById('captcha').value;
+  if (parseFloat(captchaInput) !== 10) {
+      alert('Wrong answer to the CAPTCHA question.');
+      return false;
+  }
+  return true;
+}

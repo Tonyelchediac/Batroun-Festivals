@@ -17,11 +17,27 @@
 }
 
 body {
-  margin: 0 15rem;
-  font-family: Arial, sans-serif;
+  margin: 0;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
+  font-family: "lora", sans-serif;
 }
+
+button{
+  width: 9%;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid var(--second-color);
+  border-radius: 20px;
+  color: var(--second-color);
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+  /*******************************************************************************************************************************************/
 
 .navlist {
   background-color: transparent;
@@ -30,7 +46,7 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   position: fixed;
-  width: calc(100% - 30rem);
+  width: 100%;
   top: 0;
   z-index: 1000;
   transition: background-color 0.3s;
@@ -66,6 +82,7 @@ body {
     display: block;
     color: black;
     padding: 14px 16px;
+    margin-left: 10px;
     text-decoration: none;
   }
   
@@ -75,8 +92,6 @@ body {
     cursor: pointer;
     margin-right: 20px;
     padding: 5px;
-    border: 2px solid var(--second-color);
-    border-radius: 5px;
   }
   
   .menu-toggle div {
@@ -102,74 +117,108 @@ body {
     transform: rotate(45deg) translate(-6px, -5px);
   }
 
-.get-in-touch-rn{
-  margin: 30px 0 10px 0;
-  font-size: 15px;
-  color: var(--second-color);
+  /*******************************************************************************************************************************************/
+
+  #get-in-touch {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
 }
 
-.get-in-touch-text{
-  font-size: 40px;
-  margin-bottom: 30px;
+.get-in-touch-rn {
+    margin: 30px 0 10px 0;
+    font-size: 15px;
+    color: var(--second-color);
+}
+
+.get-in-touch-text {
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
 .get-in-touch-content {
-  padding: 40px;
-  width: 100%;
+    padding: 40px;
+    width: 100%;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="number"],
-input[type="file"],
-input[type="date"],
 textarea {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form-group input[type="radio"] {
-  margin-bottom: 15px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
-button[type="submit"]{
-  width: 20%;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: transparent;
-  border: 2px solid var(--second-color);
-  border-radius: 20px;
-  color: var(--second-color);
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
+button[type="submit"] {
+    width: 20%;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--second-color);
+    border-radius: 20px;
+    color: var(--second-color);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
 }
 
-#nb-reserve-now{
-  font-size: 11px;
+/* Location section */
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-big-content {
+    margin-top: 7rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.location-text-ln {
+    font-size: large;
+    font-weight: bold;
+}
+
+.location-text-ln i {
+    margin-right: 10px;
+}
+
+.location-text {
+    font-size: large;
+    margin: 10px 0;
+}
+
+.location-content,
+.email-content,
+.phone-content {
+    margin: 20px 0px;
 }
 
 /* Footer Styles */
@@ -245,7 +294,6 @@ footer {
     padding: 10px 10px;
   }
 
-
   /* hover */
 
   button:hover{
@@ -273,7 +321,7 @@ footer {
     transform: scale(1.2); 
 }
 
-    /**********************************************/
+/*******************************************************************************************************************************************/
 
     @media (max-width: 768px) {
       .navlist {
@@ -290,9 +338,9 @@ footer {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         background-color: #f9f9f9;
-        width: 100%;
+        width: 60%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       }
     
@@ -311,33 +359,43 @@ footer {
 
     body {
       margin: 0;
-        font-family: Arial, sans-serif;
       }
 
-    
+      .location-big-content{
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
 
-  .get-in-touch-text{
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
-
-  button[type="submit"]{
-    width: 50%;
-  }
-
-  .footer-logo img {
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-  .footer-bottom p {
-      margin: 0;
-      font-size: 13px;
-      color: white;
-      text-align: center;
-      padding: 10px 10px;
+      #get-in-touch {
+        padding: 0px;
+        grid-template-columns: 1fr;
     }
+
+    .get-in-touch-content{
+      padding: 20px;
+    }
+
+      .get-in-touch-text{
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      button[type="submit"]{
+        width: 50%;
+      }
+
+      .footer-logo img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+      .footer-bottom p {
+          margin: 0;
+          font-size: 13px;
+          color: white;
+          text-align: center;
+          padding: 10px 10px;
+        }
   
 
   }
